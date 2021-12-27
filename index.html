@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+
+    <!-- -----------------font-family-------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- --------------------CSS--------------------- -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- -------------------script------------------- -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="backdrop">
+
+    </div>
+    <!-- ---------------------header----------------- -->
+    <header id="main-header">
+        <h1>
+            Play Noughts-and-crosses
+        </h1>
+        <p>
+            Built with HTML, CSS, JAVASCRIPT
+        </p>
+    </header>
+
+    <!-- ------------------------main-------------------- -->
+    <main>
+
+        <!-- ------------Overlay---------- -->
+        <div id="overlay">
+            <h2>Choose your name</h2>
+
+            <form>
+                <div class="form-control" id="form-input-field">
+                    <label for="uesername">player name</label>
+                    <input type="text" name="username" id="userinput" required/>
+                </div>
+
+                <p id="config-errors"></p>
+
+                <div>
+                    <button type="reset" id="cancel">Cancel</button>
+                    <button type="submit">Confirm</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ---------------------section1----------------------- -->
+
+        <section id="game-configuration">
+            <div id="box">
+
+                <div class="player" id="player1">
+                    <h2>Player1</h2>
+                    <h3>Player name</h3>
+                    <p class="symbol">X</p>
+                    <button id="edit-player1-button" data-playerid="1">Edit</button>
+                </div>
+
+                <div class="player" id="player2">
+                    <h2>Player2</h2>
+                    <h3>Player name</h3>
+                    <p class="symbol">O</p>
+                    <button id="edit-player2-button" data-playerid="2">Edit</button>
+                </div>
+
+            </div>
+
+            <button id="start-game-btn">Start New Game</button>
+        </section>
+
+        <!-- -----------------------section2------------------- -->
+
+        <section id="active-game">
+            <div id="game-over">
+
+           
+                <h2>You Won, <span id="winner-name">Player Name</span>!</h2>
+                <p>
+                    click "START NEW GAMR" above, to start a new game
+                </p>
+            </div>
+            <div id="try1">
+            <p>It's your turn <span id="active-player-name">Player Name</span>!</p>
+            </div>
+            <ol id="game-board">
+                <li data-col="1" data-row="1"></li>
+                <li data-col="2" data-row="1"></li>
+                <li data-col="3" data-row="1"></li>
+
+                <li data-col="1" data-row="2"></li>
+                <li data-col="2" data-row="2"></li>
+                <li data-col="3" data-row="2"></li>
+
+                <li data-col="1" data-row="3"></li>
+                <li data-col="2" data-row="3"></li>
+                <li data-col="3" data-row="3"></li>
+            </ol>
+
+        </section>
+    </main>
+
+<footer>
+    
+        <p class="copyright">website created by almas</p>
+</footer>
+
+</body>
+
+</html>

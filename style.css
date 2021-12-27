@@ -1,0 +1,200 @@
+body{
+    margin: 0;
+    font-family:'Roboto Slab', serif; 
+    color: rgb(44, 40, 40);
+    background-color: #FFEBCC;
+}
+
+/* --------------header------------- */
+#main-header{
+    background-color: #FFAFAF;
+    padding: 2rem 5%;
+    text-align: center;
+
+}
+
+button{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: #FFAFAF;
+    border: 1px solid #FFAFAF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #f79a9a;
+    border: 1px solid #f79a9a;
+}
+
+/* ----------------overlay-------------- */
+
+#overlay{
+    position: fixed;  
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    background-color:#f7f7e6;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0,0.2);
+    text-align: center;
+    display: none;
+}
+
+#backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+
+}
+
+@media (min-width: 48rem) {
+    #overlay{
+        left: calc(50% - 20rem);
+        width: 40rem;
+    }
+}
+
+
+#overlay h2{
+    margin: 0.5rem 0;
+}
+
+.form-control{
+    margin: 0.5rem 0;
+}
+
+.form-control label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control input{
+    font: inherit;
+    border: 1px solid rgb(66, 66, 66);
+    width: 15rem;
+    padding: 0.35rem;
+}
+
+/* --------------invalid-input-error---------- */
+.error label{
+    color: rgb(136, 2, 2);
+}
+.error input{
+    border-color: rgb(136, 2, 2);
+    color: rgb(136, 2, 2);
+    background-color: rgb(253, 219, 219);
+}
+
+#game-configuration{
+    width: 90%;
+    max-width: 40rem;
+    margin: 3rem auto;
+    text-align: center;
+   
+}
+
+#box{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.player{
+    margin: 1rem;
+    padding: 1rem;
+    width: 50%;
+    background-color: #FBFFE2;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0,0.4);
+}
+#game-configuration h2{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#game-configuration h3{
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color:#f79a9a;
+}
+
+.symbol{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+
+}
+
+/* -------------------active-game------------ */
+
+#active-game{
+    text-align: center;
+    margin: 2rem 0 5rem 0; /*top right bottom left*/
+    display: none;
+}
+
+#game-over{
+    max-width: 40rem;
+    margin: auto;
+    width: 90%;
+    padding: 1rem 2rem;
+    background-color: #f79a9a;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0,0.4);
+    display: none;
+}
+
+#game-over h2{
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+#active-player-name{
+    font-weight: bold;
+}
+
+#game-board{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;  /* repeat(3, 6rem)*/
+    grid-template-rows: 6rem 6rem 6rem;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0;
+   
+}
+
+#game-board li{
+    background-color: #FFAFAF;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#game-board li:hover{
+    background-color: #f79a9a;
+}
+
+#game-board li.disabled{
+    background-color: #f79a9a;
+    cursor: default;
+}
+
+
+.copyright{
+    margin-top:22rem;
+    text-align: center;
+}
